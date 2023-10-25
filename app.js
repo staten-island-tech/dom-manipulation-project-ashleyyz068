@@ -1,19 +1,16 @@
 
 const DOMSelectors ={
     button: document.getElementById("btn"), 
-    text: document.querySelector("#text"), 
+    text: document.querySelector("#input"), 
     box: document.getElementById("big-black-box"), 
     point: document.querySelectorAll(".point"),
 };
 
-function backgroundAndText (background, text){
-    background.style.backgroundColor ="red";
-    text.innerHTML ="tgus us biw bugr red"
-}
 
 DOMSelectors.button.addEventListener("click", function(){
     backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 })
+DOMSelectors.text.addEventListener("")
 
 function changeLi(){
     let pointIndec = 1; 
