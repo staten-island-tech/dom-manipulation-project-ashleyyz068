@@ -1,29 +1,41 @@
+const DOMSelectors = {
+    form: document.querySelector(`#form`),
+    title: document.querySelector(`#title`),
+    image: document.querySelector(`#image`),
+    description: document.querySelector(`#description`),
+    container: document.querySelector(`.container`) 
+};
 
-<<<<<<< HEAD
-// const DOMSelectors ={
-//     button: document.getElementById("btn"), 
-//     text: document.querySelector("#text"), 
-//     box: document.getElementById("big-black-box"), 
-//     point: document.querySelectorAll(".point"),
-// };
+DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const card = {
+        title: DOMSelectors.title.value,
+        image: DOMSelectors.image.value, 
+        description: DOMSelectors.description.value,
+    };
+    injectCard(card);
+    clearFields();
+}); 
 
-// function backgroundAndText (background, text){
-//     background.style.backgroundColor ="red";
-//     text.innerHTML ="tgus us biw bugr red"
-// }
+function injectCard(card){
+    DOMSelectors.container.insertAdjacentHTML(
+        "afterbegin", `
+        <div class="card1">
+        <div class="card">
+        <h2> ${card.title} </h2>
+        <img class="card-img" src="${card.image}" alt="">
+        <p> ${card.description}</p>
+    </div>
+    <button class="removeBtn" onclick="removeCard()">Remove</button>
+    </div>
+        `)
+}; 
 
-// DOMSelectors.button.addEventListener("click", function(){
-//     backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-// 
- function changeLi(){
-//     let pointIndec = 1; 
-//     DOMSelectors.point.forEach((point) => {
-//         point.addEventListener("click", function() {
-//             point.textContent = `hello ${pointIndec}`; 
-//         });
-//     });
-// }
+function clearFields() {
+    DOMSelectors.title.value = "";
+    DOMSelectors.image.value = "";
+    DOMSelectors.description.value = "";
+}; 
 
-// changeLi(); 
-
- 
+function removeCard(){
+}
