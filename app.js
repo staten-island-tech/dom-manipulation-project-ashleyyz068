@@ -14,23 +14,8 @@
 
 // DOMSelectors.button.addEventListener("click", function(){
 //     backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-// })
-=======
-const DOMSelectors ={
-    button: document.getElementById("btn"), 
-    text: document.querySelector("#input"), 
-    box: document.getElementById("big-black-box"), 
-    point: document.querySelectorAll(".point"),
-};
-
-
-DOMSelectors.button.addEventListener("click", function(){
-    backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-})
-DOMSelectors.text.addEventListener("")
->>>>>>> 4a72a85b0d161b94f844f5893e55526ac49560f1
-
-// function changeLi(){
+// 
+ function changeLi(){
 //     let pointIndec = 1; 
 //     DOMSelectors.point.forEach((point) => {
 //         point.addEventListener("click", function() {
