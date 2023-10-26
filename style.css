@@ -8,18 +8,26 @@ h1 {
     font-family: 'Archivo', sans-serif;
     font-size: 6vw;
     text-align: center;
-    padding: 150px;}
-
+    padding: 150px;
+}
 .container{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
     margin-top: 3rem;
 }
+.imageHead{
+    max-width: 30%; 
+    height: auto; 
+    margin-top: 2rem;
+    margin-left: 40%;
+}
+
 .header {
     
     background-size: cover;
     height: 400px; 
+    background-color: #F9D5DB;
 }
 .card {
     height: 50vh;
