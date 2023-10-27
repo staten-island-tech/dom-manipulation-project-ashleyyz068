@@ -3,12 +3,15 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    background-color: #F9D5DB;;
 }
 h1 {
     font-family: 'Archivo', sans-serif;
     font-size: 6vw;
     text-align: center;
-    padding: 150px;
+    padding: 200px;
+    color: white;
+    text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
 }
 .container{
     flex-wrap: wrap;
@@ -26,8 +29,9 @@ h1 {
 .header {
     
     background-size: cover;
-    height: 400px; 
+    height: 600px; 
     background-color: #F9D5DB;
+    background-image: url(polaroid.jpg);
 }
 .card {
     height: 50vh;
@@ -55,4 +59,8 @@ h1 {
 
 .card1{
     align-items: center;
+}
+
+.bottom{
+    margin-top: 3vh;
 }
