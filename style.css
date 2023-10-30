@@ -3,11 +3,13 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    background-color: #F9D5DB;;
+    background-color: #F9D5DB;
+    display: grid;
+    place-items: center;
 }
 h1 {
     font-family: 'Archivo', sans-serif;
-    font-size: 6vw;
+    font-size: 8vw;
     text-align: center;
     padding: 200px;
     color: white;
@@ -47,6 +49,27 @@ h1 {
     transition: all 0.3s;
     
 }
+
+.text-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  
+.text-input > input {
+    background: transparent;
+    color: inherit;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: 1rem;
+    padding: 1rem .5rem;
+    outline: transparent;
+    font-family: inherit;
+    font-size: 1.2rem;
+  }
+
+  
 .card-img{
      height: 70%;
      width: 100%;
