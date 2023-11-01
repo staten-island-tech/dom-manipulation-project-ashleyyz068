@@ -26,7 +26,7 @@ function injectCard(card){
         <img class="card-img" src="${card.image}" alt="">
         <p> ${card.description}</p>
     </div>
-    <button class="removeBtn" onclick="removeCard()">Remove</button>
+    <button class="removeBtn" onclick="removeCard(this)">Remove</button>
     </div>
         `)
 }; 
@@ -37,5 +37,7 @@ function clearFields() {
     DOMSelectors.description.value = "";
 }; 
 
-function removeCard(){
+function removeCard(button) {
+    const cardContainer = button.parentElement.parentElement; // Adjust the parent elements to reach the card container
+    DOMSelectors.container.removeChild(cardContainer);
 }
