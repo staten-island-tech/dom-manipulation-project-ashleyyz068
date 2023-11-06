@@ -41,5 +41,6 @@ function clearFields() {
 }; 
 
 function removeCard(element) {
-    element.parentElement.remove();
+    // element.parentElement.remove();
+    let but
 }
