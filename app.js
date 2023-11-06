@@ -19,7 +19,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 
 function injectCard(card){
     DOMSelectors.container.insertAdjacentHTML(
-        "afterbegin", `
+        "beforeend", `
         <div class="card1">
         <div class="card">
         <h2> ${card.title} </h2>
@@ -31,13 +31,15 @@ function injectCard(card){
         `)
 }; 
 
+const images = document.querySelectorAll('.card-img');
+
+
 function clearFields() {
     DOMSelectors.title.value = "";
     DOMSelectors.image.value = "";
     DOMSelectors.description.value = "";
 }; 
 
-function removeCard(button) {
-    const cardContainer = button.parentElement.parentElement; // Adjust the parent elements to reach the card container
-    DOMSelectors.container.removeChild(cardContainer);
+function removeCard(element) {
+    element.parentElment.remove(); 
 }
