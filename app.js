@@ -22,9 +22,9 @@ function injectCard(card){
         "beforeend", `
         <div class="card1">
         <div class="card">
-        <h2> ${card.title} </h2>
+        <h2 class="card-heading"> ${card.title} </h2>
         <img class="card-img" src="${card.image}" alt="">
-        <p> ${card.description}</p>
+        <p class="card-description"> ${card.description}</p>
     </div>
     <button class="removeBtn" onclick="removeCard(this)">Remove</button>
     </div>
@@ -41,5 +41,5 @@ function clearFields() {
 }; 
 
 function removeCard(element) {
-    element.parentElment.remove(); 
+    element.parentElement.remove();
 }
