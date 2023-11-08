@@ -14,6 +14,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
         description: DOMSelectors.description.value,
     };
     injectCard(card);
+    removeCard(); 
     clearFields();
 }); 
 
@@ -26,7 +27,7 @@ function injectCard(card){
         <img class="card-img" src="${card.image}" alt="">
         <p class="card-description"> ${card.description}</p>
     </div>
-    <button class="removeBtn" onclick="removeCard(this)">Remove</button>
+    <button class="removeBtn">Remove</button>
     </div>
         `)
 }; 
@@ -34,15 +35,21 @@ function injectCard(card){
 const images = document.querySelectorAll('.card-img');
 
 
+
+
+function removeCard() {
+
+    const buttons= document.querySelectorAll("removeBtn");
+    buttons.forEach(btn => {
+    btn.addEventListener("click", function(){
+        btn.target.parentElement.remove();
+    });
+});
+}
 function clearFields() {
     DOMSelectors.title.value = "";
     DOMSelectors.image.value = "";
     DOMSelectors.description.value = "";
 }; 
 
-function removeCard(element) {
-    // element.parentElement.remove();
-    let buttons= document.querySelectorAll("removeBtn");
-    buttons.forEach(btn) => 
-    btn.addEventListener()
-}
+// removeCard(); 
