@@ -42,5 +42,7 @@ function clearFields() {
 
 function removeCard(element) {
     // element.parentElement.remove();
-    let but
+    let buttons= document.querySelectorAll("removeBtn");
+    buttons.forEach(btn) => 
+    btn.addEventListener()
 }
