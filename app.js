@@ -17,6 +17,11 @@ DOMSelectors.form.addEventListener("submit", function (event) {
     removeCard(); 
     clearFields();
 }); 
+function clearFields() {
+    DOMSelectors.title.value = "";
+    DOMSelectors.image.value = "";
+    DOMSelectors.description.value = "";
+}; 
 
 function injectCard(card){
     DOMSelectors.container.insertAdjacentHTML(
@@ -39,17 +44,13 @@ const images = document.querySelectorAll('.card-img');
 
 function removeCard() {
 
-    const buttons= document.querySelectorAll("removeBtn");
+    const buttons= document.querySelectorAll(".removeBtn");
     buttons.forEach(btn => {
     btn.addEventListener("click", function(){
-        btn.target.parentElement.remove();
+        btn.parentElement.remove();
     });
 });
 }
-function clearFields() {
-    DOMSelectors.title.value = "";
-    DOMSelectors.image.value = "";
-    DOMSelectors.description.value = "";
-}; 
+
 
 // removeCard(); 
